@@ -7,6 +7,7 @@ quandl.ApiConfig.api_key="YOUR_TOKEN_HERE" #necessary ONLY if using the QUANDL f
 holding_list=list() #global variable. It holds the position. List element = [ticker, position_buy_value]
 investment=int() #global variable, this is the amount needed to invest. Needs to be initiated with an actual VALUE!
 
+
 #VARIOUS WAYS of getting the stock data, automatically. Alternatively nasdaq.com is a good source for personal use
 def api_iex(stock):
     """
@@ -42,14 +43,17 @@ def stock_liquidity(stock_data, investment):
 #each of the functions below are using the holding_list global variable to hold & track the position
 def buying_condition():
     #if BUY condition met, then we append [stock.lower(), stock_value] to the holding_list
+    #the buying is executed within the level of investment, the global variable
     return
 
 def loss_cut():
     #check if today's LOW value is below stock_value*(1-loss_cut_level)
+    #it also updates investment, the global valriable
     return
 
 def sell_condition():
     #if SELL condition met, then we remove [stock.lower(), stock_value] from the holding_list
+    #it also updates investment, the global variable
     return
 
 
