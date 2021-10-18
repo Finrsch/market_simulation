@@ -68,7 +68,7 @@ def algo_market_simulation(stock):
     position='' #initiating position as an empty string
     for i in range(len(stock_data)):
         if position:
-            bying_condition()
+            buying_condition()
         else:
             if loss_cut_level_condition:
                 loss_cut()
