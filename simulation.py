@@ -68,12 +68,12 @@ def algo_market_simulation(stock):
     position='' #initiating position as an empty string
     for i in range(len(stock_data)):
         if position:
-            buying_condition()
-        else:
             if loss_cut_level_condition:
                 loss_cut()
             else:
                 sell_condition()
+        else:
+            buying_condition()
         #assuming the list only holds one position
         if stock.lower() in holding_list[0]:
             position='yes'
